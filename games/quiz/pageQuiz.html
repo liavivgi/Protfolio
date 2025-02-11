@@ -1,0 +1,360 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Parkinsans:wght@300..800&family=Playwrite+HR+Lijeva+Guides&family=Rubik+Scribble&family=Satisfy&family=Yuji+Mai&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>page Quiz</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo img {
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 35px;
+            overflow: hidden;
+        }
+
+
+        .navbar-logo h1 {
+            font-size: 25px;
+            font-family: satisfy;
+            margin: 0;
+            color: #333;
+        }
+
+        .navbar-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-menu a {
+            text-decoration: none;
+            font-family: heebo, sans-serif;
+            font-weight: 500;
+            color: #000000;
+            font-size: 25px;
+            border-radius: 50px;
+            padding: 8px 12px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-menu a:hover {
+            transform: scale(1.1);
+            color: blue;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            background-color: #ffffff;
+            border-radius: 100%;
+            position: relative;
+            z-index: 1100;
+        }
+
+        .hamburger div {
+            background-color: rgb(0, 0, 0);
+            height: 7px;
+            width: 30px;
+            margin: 3px;
+            border-radius: 35px;
+            transition: transform 0.3s ease;
+        }
+
+        .hamburger div:hover {
+            transform: scale(1.1);
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                background-color: white;
+                border: 1px solid #ddd;
+                border-radius: 30px;
+                padding: 10px;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            .menu-toggle:checked~.navbar-menu {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .navbar-menu ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navbar-menu a {
+                font-size: 20px;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+
+        .Home-section {
+            position: relative;
+            width: 100%;
+            min-height: 700px;
+            background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #13E8F163;
+            opacity: 0.80;
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            text-align: center;
+            z-index: 2;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 35px;
+            background-color: rgb(250, 250, 231);
+            box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-title {
+            font-size: 50pt;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 15px;
+            font-family: 'heebo';
+        }
+
+        .description {
+            font-size: 20pt;
+            color: #000000;
+            line-height: 1.6;
+            font-weight: 900;
+            letter-spacing: 1px;
+            font-family: 'Rubik Scribble';
+        }
+
+        @media (max-width: 768px) {
+            .Home-section {
+                padding: 10px;
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+        }
+
+        .image-gallery-section {
+            padding: 20px 20px;
+            background: linear-gradient(to bottom, #ffffff, #ffffff);
+
+        }
+
+        .image-gallery {
+            display: flex;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 35px;
+            width: 100%;
+            height: 110px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-item img {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+        .image-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-item:hover img {
+            transform: scale(1.08);
+        }
+
+        @media (max-width: 768px) {
+            .image-gallery {
+                gap: 10px;
+            }
+        }
+
+        .link {
+            text-decoration: none;
+            display: inline-block;
+            color: black;
+            font-size: 15pt;
+            background-color: aqua;
+            border-radius: 250px;
+            padding: 10px;
+            margin: 10px;
+            margin-top: 25px;
+            box-shadow: 0px 3px 6px #00000029;
+            transition: color 0.8 ease, transform 0.3s ease;
+            font-family: heebo;
+            transition: transform 0.3s ease;
+        }
+
+        .link:hover {
+            transform: scale(1.1);
+            color: rgb(0, 0, 0);
+        }
+
+        .image-container {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f0f8ff;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="navbar">
+        <div class="navbar-container">
+
+            <div class="navbar-logo">
+                <img src="../../images/profile img.jpg" alt="Liav Ivgi">
+                <h1>Liav Ivgi</h1>
+            </div>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+
+
+            <nav class="navbar-menu">
+                <ul dir="rtl">
+                    <li><a href="../../index.html">ראשי</a></li>
+                    <li><a href="../../index.html">אודות</a></li>
+                    <li><a href="../../index.html">גלריה</a></li>
+                    <li><a href="../../index.html">צור קשר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="Home" class="Home-section">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 dir="rtl" class="main-title">משחק חידון</h1>
+            <p dir="rtl" class="description">
+
+            </p>
+            <a class="link" href="index.html">קישור לפרוייקט</a>
+            <a class="link" href="quiz.rar">להורדת הפרוייקט</a>
+        </div>
+    </section>
+
+    <div class="image-gallery">
+        <div class="image-item">
+            <img src="../../images/cssIMAGE.png" alt="css img">
+        </div>
+        <div class="image-item">
+            <img src="../../images/htmlIMG.png" alt="html img">
+        </div>
+        <div class="image-item">
+            <img src="../../images/js.png" alt="html img">
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="../../games/quiz/Screenshot 2025-02-11 121637.png" alt=" תמונת הפרוייקט">
+    </div>
+</body>
+
+</html>

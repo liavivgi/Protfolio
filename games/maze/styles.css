@@ -1,0 +1,92 @@
+body {
+    font-family: heebo;
+    text-align: center;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    direction: rtl;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#maze-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#maze {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 2px;
+    background: #222;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 1.5em;
+    transition: background 0.2s ease-in-out;
+}
+
+.wall {
+    background-color: black !important;
+}
+
+.start {
+    background-color: #4CAF50 !important;
+    color: white;
+}
+
+.end {
+    background-color: #FFEB3B !important;
+    color: black;
+}
+
+.player {
+    background-color: #007bff !important;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#timer {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#result {
+    font-size: 1.5em;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#restart-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#restart-button:hover {
+    transform: scale(1.1);
+}
