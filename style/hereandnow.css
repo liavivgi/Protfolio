@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #f0f0f0; 
+    background-image: url(../images/dominik-schroder-FIKD9t5_5zQ-unsplash.jpg);
+    background-size: cover; 
+    background-position: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 10px;
+    font-family: heebo;
+    width: 100%; 
+    max-width: 800px; 
+}
+
+section h1 {
+    font-family: satisfy;
+    font-size: 80pt;
+    letter-spacing: 3px;
+    margin-bottom: 1px;
+    font-weight: 800;
+}
+
+section p {
+    font-family: serif;
+}
+
+.footer {
+
+    padding: 20px 0;
+    text-align: center;
+    width: 100%; 
+
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto; 
+
+.footer-form {
+    display: flex;
+    justify-content: space-between; 
+    gap: 15px; 
+    align-items: center;
+    font-family: heebo;
+}
+}
+
+.footer-input {
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #070707;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    font-family: heebo;
+}
+
+.footer-input:first-child {
+    margin-right: 10px; 
+    font-family: heebo;
+}
+
+.footer-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 0 0 auto; 
+    font-family: heebo;
+}
+
+.footer-button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .footer-form {
+        flex-direction: column; 
+    }
+
+    .footer-input,
+    .footer-button {
+        width: 80%; 
+        margin: 5px 0;
+    }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Parkinsans:wght@300..800&family=Playwrite+HR+Lijeva+Guides&family=Rubik+Scribble&family=Satisfy&family=Yuji+Mai&display=swap"
+        rel="stylesheet">
+    <title>תנו לנו להוביל</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .half-screen {
+            width: 100vw;
+            height: 50vh;
+            background: url(../images/Path15.png) no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .form-container {
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            color: #fff;
+            padding: 45px;
+            border-radius: 2px;
+            width: 470px;
+            position: absolute;
+            top: 40%;
+            height: 42%;
+
+            right: 5%;
+
+            transform: translateY(-50%);
+
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            font-family: heebo;
+
+        }
+
+        .form-container h2 {
+            margin-bottom: 15px;
+            font-size: 25pt;
+            margin-top: 15px;
+        }
+
+        .form-container p {
+            font-size: 15pt;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .form-container input {
+            width: 85%;
+            padding: 15px;
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 2px;
+            font-size: 14px;
+            border: 1px solid #ff007a;
+        }
+
+        .form-container button {
+            background-color: #ff007a;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 50%;
+            font-size: 25px;
+            margin-top: 20px;
+            font-family: heebo;
+        }
+
+        .form-container button:hover {
+            background-color: #6f0f3f;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .half-screen {
+                justify-content: center;
+
+            }
+
+            .form-container {
+                width: 90%;
+
+                padding: 15px;
+
+            }
+
+            .form-container h2 {
+                font-size: 18px;
+
+            }
+
+            .form-container p {
+                font-size: 12px;
+            }
+
+            .form-container button {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+
+
+        @media screen and (max-width: 480px) {
+            .form-container {
+                width: 95%;
+
+            }
+
+            .form-container h2 {
+                font-size: 16px;
+            }
+
+            .form-container p {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="half-screen">
+        <div dir="rtl" class="form-container">
+            <h2>תן לנו להוביל אותך קדימה</h2>
+            <p>לורם איפסום בקיצור, הטקסט הוא רק לצורך הדגמה.</p>
+            <form>
+                <input type="text" placeholder="שם מלא" required>
+                <input type="email" placeholder="אימייל" required>
+                <button type="submit">שליחה</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

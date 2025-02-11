@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Parkinsans:wght@300..800&family=Playwrite+HR+Lijeva+Guides&family=Rubik+Scribble&family=Satisfy&family=Yuji+Mai&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: heebo;
+            line-height: 1.6;
+            max-width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: #f5f5f5;
+        }
+
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            gap: 2px;
+            padding: 10PX;
+            max-width: 50%;
+            max-height: 70%;
+            margin: 0;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 280px;
+            height: 200px;
+            object-fit: cover;
+
+        }
+
+        @media (max-width: 768px) {
+            .parent {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                gap: 10px;
+            }
+
+            .div2,
+            .div8 {
+                grid-column: 1 / -1;
+                grid-row: auto;
+            }
+        }
+
+        .div2 {
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            grid-column-start: 3;
+            grid-row-start: 1;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #0EE1DA;
+            background-color: #020253;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .div2 h1 {
+            font-family: heebo;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            margin-top: 55px;
+        }
+
+        .div2 p {
+            color: #ffffff;
+            font-size: 1rem;
+            font-family: heebo;
+        }
+
+        .div8 {
+            grid-column: span 2 / span 2;
+            grid-row: span 3 / span 3;
+            grid-column-start: 1;
+            grid-row-start: 4;
+            text-align: center;
+            background-color: #B51284;
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+            max-width: 600px;
+            margin: 0;
+
+            p,
+            h1 {
+                margin-top: 15px;
+            }
+        }
+
+        .div8 form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            font-family: heebo;
+            margin-top: 50px;
+        }
+
+        .div8 input,
+        .div8 textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-family: heebo;
+        }
+
+        .div8 button {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            background-color: #00AEEF;
+            color: white;
+            border: none;
+            font-family: heebo;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .div8 button:hover {
+            background-color: #008CBA;
+        }
+
+        .div8 h1 {
+            font-family: heebo;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .div8 p {
+            font-family: heebo;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="div1"><img src="../images/Rectangle 510.png" alt="pic"></div>
+        <div class="div2">
+            <h1>לגלות את העולם</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur distinctio, magni maiores.</p>
+        </div>
+        <div class="div3"><img src="../images/Rectangle 511.png" alt="pic"></div>
+        <div class="div4"><img src="../images/Rectangle 509.png" alt="pic"></div>
+        <div class="div5"><img src="../images/Rectangle 514.png" alt="pic"></div>
+        <div class="div6"><img src="../images/Rectangle 517.png" alt="pic"></div>
+        <div class="div7"><img src="../images/Rectangle 516.png" alt="pic"></div>
+        <div class="div8">
+            <h1>ספרו לנו על החוויה שלכם</h1>
+            <p>לורם איפסום הוא טקסט דמה בשימוש מעצבים.</p>
+            <form dir="rtl">
+                <input type="text" placeholder="שם מלא" required>
+                <input type="email" placeholder="דואר" required>
+                <textarea rows="4" placeholder="החוויה שלכם"></textarea>
+                <button type="submit">שליחה</button>
+            </form>
+        </div>
+        <div class="div10"><img src="../images/Rectangle 515.png" alt="pic"></div>
+        <div class="div11"><img src="../images/Rectangle 518.png" alt="pic"></div>
+        <div class="div12"><img src="../images/Rectangle 507.png" alt="pic"></div>
+        <div class="div13"><img src="../images/Rectangle 508.png" alt="pic"></div>
+        <div class="div14"><img src="../images/Rectangle 506.png" alt="pic"></div>
+        <div class="div15"><img src="../images/Rectangle 512.png" alt="pic"></div>
+        <div class="div16"><img src="../images/Rectangle 513.png" alt="pic"></div>
+        <div class="div17"><img src="../images/Rectangle 519.png" alt="pic"></div>
+    </div>
+</body>
+
+</html>

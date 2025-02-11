@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Parkinsans:wght@300..800&family=Playwrite+HR+Lijeva+Guides&family=Rubik+Scribble&family=Satisfy&family=Yuji+Mai&display=swap"
+        rel="stylesheet">
+    <title>project 6</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: heebo;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            font-family: heebo;
+            color: #FDBD03;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            height: 80vh;
+        }
+
+        .container img {
+            width: 40%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.3em;
+            background-color: #E5EEFF;
+            resize: none;
+            border: 1px solid #E5EEFF;
+            border-bottom: 3px solid #FDBD03;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .form-row label {
+            font-size: 1em;
+            margin-bottom: 2px;
+            font-family: heebo;
+            font-weight: 700;
+        }
+
+        .form-row input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #E5EEFF;
+            border-radius: 5px;
+            font-size: 1em;
+            border-bottom: 3px solid #FDBD03;
+            font-weight: 700;
+            background-color: #E5EEFF;
+        }
+
+        .form-container button {
+            width: 30%;
+            padding: 10px;
+            background-color: #FDBD03;
+            color: rgb(0, 0, 0);
+            border: none;
+            font-weight: 700;
+            font-size: 1.2em;
+            font-family: heebo;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #FDcD55;
+        }
+
+        .textarea {
+            font-family: heebo;
+            font-weight: 700;
+        }
+
+        .social-icons {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            font-size: 24pt;
+            font-weight: 700;
+            justify-content: center;
+            align-items: center;
+            background-color: #FDBD03;
+            border-radius: 50%;
+            text-decoration: none;
+            color: black;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        .social-icons a:hover {
+            background-color: #FFAA00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div dir="rtl" class="container">
+        <img src="../images/Image 1.png" alt="Example Image">
+        <div class="form-container">
+            <h1>ייעוץ חינם</h1>
+            <p>לקבלת ייעוץ חינם מוזמנים ליצור קשר ומומחה יחזור אליכם</p>
+            <div class="form-row">
+                <div style="flex: 1; display: flex; flex-direction: column;">
+                    <label for="name">שם מלא</label>
+                    <input type="text" id="name" placeholder="" required>
+                </div>
+                <div style="flex: 1; display: flex; flex-direction: column;">
+                    <label for="email">דוא"ל</label>
+                    <input type="email" id="email" placeholder="" required>
+                </div>
+            </div>
+            <label class="textarea" for="textarea">השאר הודעה</label>
+            <textarea rows="4" placeholder=" "></textarea>
+            <button type="submit">שליחה</button>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="../images/phone-call.png" alt="phone-call"></a>
+            <a href="#">in</a>
+            <a href="#"><img src="../images/instagram.png" alt="instagram"></a>
+            <a href="#"><img src="../images/facebook-app-symbol.png" alt="facebook-app-symbol"></a>
+        </div>
+    </div>
+</body>
+
+</html>

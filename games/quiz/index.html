@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Parkinsans:wght@300..800&family=Playwrite+HR+Lijeva+Guides&family=Rubik+Scribble&family=Satisfy&family=Yuji+Mai&display=swap"
+        rel="stylesheet">
+    <title>משחק חידון </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>🎯 משחק חידון - כמה אתה יודע?</h1>
+
+    <div id="category-selection">
+        <h2>בחר קטגוריה:</h2>
+        <button class="category-btn" data-category="general">כללי</button>
+        <button class="category-btn" data-category="science">מדע</button>
+        <button class="category-btn" data-category="sports">ספורט</button>
+    </div>
+
+    <div id="quiz-container" class="hidden">
+        <p id="question">טוען שאלה...</p>
+        <div id="timer">⏳ 10 שניות</div>
+        <div id="answer-buttons">
+            <button class="answer-btn"></button>
+            <button class="answer-btn"></button>
+            <button class="answer-btn"></button>
+            <button class="answer-btn"></button>
+        </div>
+        <p id="feedback"></p>
+        <button id="next-button" class="hidden">לשאלה הבאה</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
